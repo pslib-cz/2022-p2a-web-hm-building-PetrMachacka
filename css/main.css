@@ -1,0 +1,15 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.body__main {
+    grid-area: main;
+}
+
+.body__footer {
+    grid-area: footer;
+}
+
+.body__header {
+    grid-area: header;
+}
