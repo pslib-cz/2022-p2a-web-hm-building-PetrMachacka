@@ -108,5 +108,21 @@ h3{
 }
 .main__section{
     margin-top: 0;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
+}
+.main__section::after{
+    content: "Zobrazit Více";
+    padding:  0.5em 2em;
+    border: 1px dashed var(--primary);
+}
+.main__section:nth-child(2n + 1) > img{
+    border-bottom-left-radius: 4em;
+
+}
+.main__section:nth-child(2n) > img{
+    border-bottom-right-radius: 2em;
+
+}
+.main__section-img{
+    height: 10em;
 }
