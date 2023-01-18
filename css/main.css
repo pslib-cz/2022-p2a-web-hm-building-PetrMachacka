@@ -3,10 +3,11 @@
     src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 body{
-    display: flex;
-    justify-content:center;
+
+
     margin: 0;
     padding: 0;
+    
 }
 a{
     margin: 0;
@@ -20,8 +21,15 @@ a{
 
 .body__header {
     display:flex;
-    flex-direction: column;
-    align-items: center;
+    background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%) ,url("../media/pageheader-1920w.jpg");
+    background-position: center;  
+    background-blend-mode: normal, normal, hue, normal;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 269px;
+    width: 100vw;
+    justify-content: center;
+    align-items:flex-end;
 }
 .navbar__hamburgermenu-line{
     width: 46px;
@@ -42,12 +50,9 @@ a{
 .navbar{
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    height: fit-content;
-    width: 89vw;
+
     align-items: center;
-    padding-bottom: 1.5em;
-    padding-top: 1.5em;
+    margin: 24px 20px;
 }
 .navbar__hamburgermenu-text{
     font-family: "Open Sans";
@@ -57,9 +62,24 @@ a{
 .navbar-logo{
     width: 9em;
 }
-.header__image-picture{
-    width: 500px;
+.header__text{
+    bottom: 0;
+    color: white;
+    font-family: "Open Sans";
+    padding-bottom: 1em;
+    text-align: center;
 }
-.header__image{
-    align-items: center;
+.header__text > *{
+    margin: 0;
+}
+.header__text-1{
+    font-weight: 800;
+    font-size: 30px;
+}
+.header__text-2{
+    font-size: 20px;
+    font-weight: 300;
+}
+.services{
+    width: 89wh;
 }
