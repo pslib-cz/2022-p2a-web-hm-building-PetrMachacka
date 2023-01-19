@@ -2,6 +2,9 @@
     font-family: "Open Sans";
     src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
 }
+html {
+    scroll-behavior: smooth;
+}
 :root{
     --primary: #EB6C27;
     --btn--filled:#EB6C27;
@@ -26,7 +29,9 @@ a{
     justify-content: center;
     grid-template-columns: 0.9fr;
 }
-    
+.p{
+    margin: 0.3em
+}
 
 
 .body__header {
@@ -94,11 +99,15 @@ a{
     color: var(--primary);
 }
 .img {
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .services__header{
     margin-bottom: 5em;
+}
+h2{
+    font-size: 22px;
 }
 h3{
     font-size: 20px;
@@ -155,7 +164,7 @@ h3{
     font-weight: 700;
 }
 .body__header__containter{
-    width: 70%;
+    width: 100%;
 }
 .main__reference{
     text-align: center;
@@ -191,6 +200,47 @@ h3{
     color: white;
 }
 .footer__text{
-    width: 70%;
+    width: 80%;
     text-align: center;
+    font-size: 15px;
+    justify-content: center;
+}
+.footer__btn{
+    display: block;
+    text-align: center;
+    margin-top: 1.5em;
+    padding: 0.9em;
+    width: 137px;
+    background-color: var(--primary);
+    background-color: var(--bg);
+    font-weight: 700;
+    color: var(--primary);
+}
+.navbar__popupmenu{
+    position: absolute;
+    width: 80vw;
+    background-color: var(--primary);
+    list-style: none;
+    right: 40px;
+    top: 80px;
+    margin:0;
+    padding: 0 ;
+    border-top: 1em solid var(--bg);
+    border-right: 1em solid transparent;
+    
+}
+.navbar__popupmenu-item{
+    font-size: 16px;
+    color: var(--bg);
+    margin: 1em 1.5em;
+    text-decoration: underline;
+}
+.navbar__popupmenu-item > a{
+    color: var(--bg)
+}
+.about__list{
+    padding-left:1em;
+}
+.about__list-item::marker{
+    color: orange;
 }

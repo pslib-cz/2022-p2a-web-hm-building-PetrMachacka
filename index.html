@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar" id="home">
         <a href="#"><img class="navbar-logo" src="./media/logo.png"></a>
         <a class="navbar__hamburgermenu" href="#">
             <div class="navbar__hamburgermenu-text">MENU</div>
@@ -17,6 +17,13 @@
                 <div class="navbar__hamburgermenu-line"></div>
                 <div class="navbar__hamburgermenu-line"></div>
             </div>
+            <ul class="navbar__popupmenu">
+                <li class="navbar__popupmenu-item"><a href="./index.html#home">Domů</a></li>
+                <li class="navbar__popupmenu-item"><a href="./index.html#sluzby">Služby</a></li>
+                <li class="navbar__popupmenu-item"><a href="./index.html#references">Reference</a></li>
+                <li class="navbar__popupmenu-item"><a href="./About.html">O NÁS</a></li>
+                <li class="navbar__popupmenu-item"><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
         </a>
     </div>
     <header class="body__header">
@@ -26,7 +33,7 @@
         </div>
     </header>
     <main class="body__main">
-        <article class="services">
+        <article class="services" id="sluzby">
             <header class="services__header">
                 <h2 class="services__header-heading">Využijte škálu našich <span class="orange">služeb</span></h2>
                 <p class="article-text">Ačkoliv provádíme především <strong>průmyslové stavby</strong>, nsení pro nás problém postavit Vám <strong>rodinný domek na klíč</strong>, nebo jen hrubou stavbu. Nejsou nám cizí ani <strong>rekonstrukce budov</strong> a jejich údržba a to včetně okolních ploch.</p>
@@ -66,7 +73,7 @@
     </header>
     <main class="body__main">
         <article class="services">
-            <header class="services__header">
+            <header class="services__header" id="references">
                 <h2 class="services__header-heading">Rádi vám ukážeme naše <span class="orange">reference</span></h2>
                 <p class="article-text">Stojí za námi kvalitně vyhotovené zakázky dle konkrétních požadavků zadavatelů podepřené letitými zkušenostmi ve stavebnictví. To, že obrátit se na právě nás je vhodná volba potvrdí naši klienti, na jejichž stavbách jsme zanechali náš rukopis. Reference jsou jen zlomkem naší práce, za kterou se rozhodně nestydíme.</p>
             </header>
@@ -85,9 +92,7 @@
                 <h3>Venkovní plochy Restyl</h3>
                 <p>Provádění venkovních ploch</p>
             </section>
-            <div class="btn--center">
-                <a class="main__reference-btn" href="#">Více referencí</a>
-            </div>
+            <div class="btn--center"><a class="main__reference-btn" href="./reference.html">Více referencí</a></div>
             
         </article>
     </main>
@@ -95,6 +100,8 @@
         <div class="footer__text">
             <h2 class="white">Plácneme si pro Váš projekt?</h2>
             <p class="white">Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+            <a class=""></a>
+            <div class="btn--center"><a class="footer__btn" href="#">Nezávazně Poptat</a></div>
         </div>
     </footer>
 
