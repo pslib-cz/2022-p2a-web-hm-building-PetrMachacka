@@ -19,8 +19,7 @@ body > *{
     font-weight: 400;
 }
 a{
-    margin: 0;
-    padding: 0;
+    text-decoration: none;
 }
 .body__main {
     display: grid;
@@ -28,8 +27,7 @@ a{
     grid-template-columns: 0.9fr;
 }
     
-.body__footer {
-}
+
 
 .body__header {
     display:flex;
@@ -110,9 +108,12 @@ h3{
     margin-top: 0;
     margin-bottom: 2em;
 }
-.main__section::after{
-    content: "Zobrazit Více";
-    padding:  0.5em 2em;
+.main__section-btn{
+    display: block;
+    padding:  0.5em;
+    width: 30%;
+    text-align: center;
+    color: #EB6C27;
     border: 1px dashed var(--primary);
 }
 .main__section:nth-child(2n + 1) > img{
@@ -125,4 +126,71 @@ h3{
 }
 .main__section-img{
     height: 10em;
+}
+.body__header__trust{
+    display:flex;
+    background: linear-gradient(0deg, rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), linear-gradient(180deg, rgba(66, 51, 42, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url("../media/background-CTAblock-4460w.jpg");
+    background-position: center;  
+    background-blend-mode: normal, normal, hue, normal;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 189px;
+    width: 100vw;
+    flex-direction: column;
+}
+.header__trust-text{
+    color: var(--bg);
+    font-size: 17px;
+    margin: 1em 0 0 1em
+}
+.header__trust-btn{
+    display: block;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-left: 1em;
+    padding: 0.9em;
+    width: 40%;
+    background-color: var(--primary);
+    color: var(--bg);
+    font-weight: 700;
+}
+.body__header__containter{
+    width: 70%;
+}
+.main__reference{
+    text-align: center;
+    margin-top: 2em;
+}
+.main__reference > p{
+    margin: 0;
+}
+.main__reference-btn{
+    display: block;
+    text-align: center;
+    margin-top: 1.5em;
+    margin-left: 1em;
+    padding: 0.9em;
+    width: 40%;
+    background-color: var(--primary);
+    color: var(--bg);
+    font-weight: 700;
+
+}
+.btn--center{
+    display: flex;
+    justify-content: center;
+}
+.body__footer {
+    display: flex;
+    margin-top: 5em;
+    height: 283px;
+    background-color: var(--primary);
+    justify-content: center;
+}
+.white{
+    color: white;
+}
+.footer__text{
+    width: 70%;
+    text-align: center;
 }
