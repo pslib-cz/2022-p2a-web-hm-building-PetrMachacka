@@ -8,31 +8,43 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="navbar" id="home">
-        <a href="./index.html"><img class="navbar-logo" src="./media/logo.png"></a>
-        <a class="navbar__hamburgermenu" href="#">
-            <div class="navbar__hamburgermenu-text">MENU</div>
-            <div class="navbar__hamburgermenu__lines">
-                <div class="navbar__hamburgermenu-line"></div>
-                <div class="navbar__hamburgermenu-line"></div>
-                <div class="navbar__hamburgermenu-line"></div>
-            </div>
-            <ul class="navbar__popupmenu">
+    <header class="body__header">
+        <nav class="navbar" id="home">
+            <a href="./index.html"><img class="navbar-logo" src="./media/logo.png"></a>
+            <a class="navbar__hamburgermenu hamburger-menu"><a href="javascript:void(0)">
+                <div class="navbar__hamburgermenu-text">MENU</div>
+                <div class="navbar__hamburgermenu__lines">
+                    <div class="navbar__hamburgermenu-line"></div>
+                    <div class="navbar__hamburgermenu-line"></div>
+                    <div class="navbar__hamburgermenu-line"></div>
+                </div>
+            </a>
+            <ul class="navbar__popupmenu navbar__popupmenu-list navbar__popupmenu--hidden">
                 <li class="navbar__popupmenu-item"><a href="./index.html#home">Domů</a></li>
                 <li class="navbar__popupmenu-item"><a href="./index.html#sluzby">Služby</a></li>
-                <li class="navbar__popupmenu-item"><a href="./index.html#references">Reference</a></li>
+                <li class="navbar__popupmenu-item"><a href="./reference.html">Reference</a></li>
                 <li class="navbar__popupmenu-item"><a href="./About.html">O NÁS</a></li>
                 <li class="navbar__popupmenu-item"><a href="./kontakt.html">Kontakt</a></li>
             </ul>
-        </a>
-    </div>
-    <header class="body__header">
+        </nav>
+        <script>
+            const hamburgerButtons = document.querySelectorAll(".hamburger-menu");
+            for (const btn of hamburgerButtons) {
+                btn.onclick = (event) => {
+                    const menus = document.querySelectorAll(".navbar__popupmenu-list")
+                    for (const menu of menus) {
+                        menu.classList.toggle(".navbar__popupmenu--hidden")
+                    }
+                }
+            }
+        </script>
         <div class="header__text">
             <h1 class="header__text-1">HM Building.cz s.r.o.</h1>
             <h2 class="header__text-2">liberecká stavební společnost</h2>
         </div>
     </header>
     <main class="body__main">
+        
         <article class="services" id="sluzby">
             <header class="services__header">
                 <h2 class="services__header-heading">Využijte škálu našich <span class="orange">služeb</span></h2>

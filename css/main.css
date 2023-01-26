@@ -46,6 +46,8 @@ a{
     justify-content: center;
     align-items:flex-end;
 }
+/*NAVBAR*/
+
 .navbar__hamburgermenu-line{
     width: 46px;
     height: 8px;
@@ -65,15 +67,42 @@ a{
 .navbar{
     display: flex;
     justify-content: space-between;
-
+    top: 0;
+    position: absolute;
     align-items: center;
-    margin: 24px 20px;
+    width: 100vw;
+    background-color: var(--bg);
+    height: 60px;
 }
 .navbar__hamburgermenu-text{
     font-size: 12px;
 }
 .navbar-logo{
     width: 9em;
+}
+.navbar__popupmenu{
+    position: absolute;
+    width: 80vw;
+    background-color: var(--primary);
+    list-style: none;
+    right: 40px;
+    top: 80px;
+    margin:0;
+    padding: 0 ;
+    border-top: 1em solid var(--bg);
+    border-right: 1em solid transparent;
+}
+.navbar__popupmenu--hidden{
+}
+.navbar__popupmenu-item{
+    font-size: 16px;
+    color: var(--bg);
+    margin: 1em 1.5em;
+    text-decoration: underline;
+
+}
+.navbar__popupmenu-item > a{
+    color: var(--bg)
 }
 .header__text{
     bottom: 0;
@@ -216,28 +245,7 @@ h3{
     font-weight: 700;
     color: var(--primary);
 }
-.navbar__popupmenu{
-    position: absolute;
-    width: 80vw;
-    background-color: var(--primary);
-    list-style: none;
-    right: 40px;
-    top: 80px;
-    margin:0;
-    padding: 0 ;
-    border-top: 1em solid var(--bg);
-    border-right: 1em solid transparent;
-    
-}
-.navbar__popupmenu-item{
-    font-size: 16px;
-    color: var(--bg);
-    margin: 1em 1.5em;
-    text-decoration: underline;
-}
-.navbar__popupmenu-item > a{
-    color: var(--bg)
-}
+
 .about__list{
     padding-left:1em;
 }
