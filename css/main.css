@@ -67,12 +67,15 @@ a{
 .navbar{
     display: flex;
     justify-content: space-between;
-    top: 0;
-    position: absolute;
+    
     align-items: center;
     width: 100vw;
     background-color: var(--bg);
     height: 60px;
+}
+.navbar--absolute{
+    top: 0;
+    position: absolute;
 }
 .navbar__hamburgermenu-text{
     font-size: 12px;
@@ -80,7 +83,24 @@ a{
 .navbar-logo{
     width: 9em;
 }
-.navbar__popupmenu{
+/*MENU*/
+.navbar__hamburgermenu input:checked ~ .menu {
+    display: block;
+    box-shadow: -20px 0 40px rgba(0,0,0,0.3);
+}
+.toggle-menu {
+    position: absolute;
+    width: 46px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navbar__hamburger, .toggle-menu {
+    display: none;
+}
+.menu{
     position: absolute;
     width: 80vw;
     background-color: var(--primary);
@@ -92,18 +112,18 @@ a{
     border-top: 1em solid var(--bg);
     border-right: 1em solid transparent;
 }
-.navbar__popupmenu--hidden{
-}
-.navbar__popupmenu-item{
+.menu__item{
     font-size: 16px;
     color: var(--bg);
     margin: 1em 1.5em;
     text-decoration: underline;
 
 }
-.navbar__popupmenu-item > a{
+.menu__item > a{
     color: var(--bg)
 }
+
+
 .header__text{
     bottom: 0;
     color: var(--bg);
@@ -113,11 +133,11 @@ a{
 .header__text > *{
     margin: 0;
 }
-.header__text-1{
+.header__text--1{
     font-weight: 800;
     font-size: 30px;
 }
-.header__text-2{
+.header__text--2{
     font-size: 20px;
     font-weight: 300;
 }
@@ -195,24 +215,26 @@ h3{
 .body__header__containter{
     width: 100%;
 }
-.main__reference{
+.reference{
     text-align: center;
     margin-top: 2em;
 }
-.main__reference > p{
+.reference > p{
     margin: 0;
 }
-.main__reference-btn{
+.btn{
     display: block;
     text-align: center;
     margin-top: 1.5em;
-    margin-left: 1em;
     padding: 0.9em;
-    width: 40%;
+    width: 47%;
     background-color: var(--primary);
     color: var(--bg);
     font-weight: 700;
-
+}
+.btn--white{
+    color: var(--primary);
+    background-color: var(--bg);
 }
 .btn--center{
     display: flex;
@@ -233,17 +255,6 @@ h3{
     text-align: center;
     font-size: 15px;
     justify-content: center;
-}
-.footer__btn{
-    display: block;
-    text-align: center;
-    margin-top: 1.5em;
-    padding: 0.9em;
-    width: 137px;
-    background-color: var(--primary);
-    background-color: var(--bg);
-    font-weight: 700;
-    color: var(--primary);
 }
 
 .about__list{
