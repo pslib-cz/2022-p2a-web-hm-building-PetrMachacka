@@ -5,42 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="./scripts/main.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header class="body__header">
+    <header class="header-others">
         <nav class="navbar" id="home">
             <a href="./index.html"><img class="navbar-logo" src="./media/logo.png"></a>
-            <a class="navbar__hamburgermenu hamburger-menu"><a href="javascript:void(0)">
-                <div class="navbar__hamburgermenu-text">MENU</div>
-                <div class="navbar__hamburgermenu__lines">
-                    <div class="navbar__hamburgermenu-line"></div>
-                    <div class="navbar__hamburgermenu-line"></div>
-                    <div class="navbar__hamburgermenu-line"></div>
-                </div>
-            </a>
-            <ul class="navbar__popupmenu navbar__popupmenu-list navbar__popupmenu--hidden">
-                <li class="navbar__popupmenu-item"><a href="./index.html#home">Domů</a></li>
-                <li class="navbar__popupmenu-item"><a href="./index.html#sluzby">Služby</a></li>
-                <li class="navbar__popupmenu-item"><a href="./reference.html">Reference</a></li>
-                <li class="navbar__popupmenu-item"><a href="./About.html">O NÁS</a></li>
-                <li class="navbar__popupmenu-item"><a href="./kontakt.html">Kontakt</a></li>
+            <div class="hamburgermenu">
+                <div class="hamburgermenu-text">MENU</div>
+                <div class="hamburgermenu-line"></div>
+                <div class="hamburgermenu-line"></div>
+                <div class="hamburgermenu-line"></div>
+            </div>
+            <ul class="menu">
+                <li class="menu__item"><a href="./index.html#home">Domů</a></li>
+                <li class="menu__item"><a href="./index.html#sluzby">Služby</a></li>
+                <li class="menu__item"><a href="./reference.html">Reference</a></li>
+                <li class="menu__item"><a href="./About.html">O NÁS</a></li>
+                <li class="menu__item"><a href="./kontakt.html">Kontakt</a></li>
             </ul>
+            
         </nav>
-        <script>
-            const hamburgerButtons = document.querySelectorAll(".hamburger-menu");
-            for (const btn of hamburgerButtons) {
-                btn.onclick = (event) => {
-                    const menus = document.querySelectorAll(".navbar__popupmenu-list")
-                    for (const menu of menus) {
-                        menu.classList.toggle(".navbar__popupmenu--hidden")
-                    }
-                }
-            }
-        </script>
+        
         <div class="header__text">
-            <h1 class="header__text-1">HM Building.cz s.r.o.</h1>
-            <h2 class="header__text-2">liberecká stavební společnost</h2>
+            <h1 class="header__text--1">HM Building.cz s.r.o.</h1>
+            <h2 class="header__text--2">liberecká stavební společnost</h2>
         </div>
     </header>
 </body>

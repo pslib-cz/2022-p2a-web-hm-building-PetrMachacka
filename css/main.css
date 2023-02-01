@@ -24,7 +24,7 @@ body > *{
 a{
     text-decoration: none;
 }
-.body__main {
+.main {
     display: grid;
     justify-content: center;
     grid-template-columns: 0.9fr;
@@ -34,42 +34,31 @@ a{
 }
 
 
-.body__header {
-    display:flex;
-    background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%) ,url("../media/pageheader-1920w.jpg");
-    background-position: center;  
-    background-blend-mode: normal, normal, hue, normal;
-    background-repeat: no-repeat; 
-    background-size: cover;
-    height: 269px;
-    width: 100vw;
-    justify-content: center;
-    align-items:flex-end;
-}
+
 /*NAVBAR*/
 
-.navbar__hamburgermenu-line{
+.hamburgermenu-line{
     width: 46px;
     height: 8px;
     background: linear-gradient(90deg, #EB6C27 0%, #FFBE9A 100%);
 }
-.navbar__hamburgermenu__lines{
+
+.hamburgermenu{
     display: flex;
+    text-decoration: none;
+    text-align: center;
     flex-direction: column;
     gap: 5px;
 }
-.navbar__hamburgermenu{
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    text-align: center;
+.hamburgermenu-text{
+    font-size: 12px;
 }
+
 .navbar{
     display: flex;
     justify-content: space-between;
-    
-    align-items: center;
     width: 100vw;
+    align-items: center;
     background-color: var(--bg);
     height: 60px;
 }
@@ -77,41 +66,39 @@ a{
     top: 0;
     position: absolute;
 }
-.navbar__hamburgermenu-text{
-    font-size: 12px;
-}
+
 .navbar-logo{
     width: 9em;
 }
 /*MENU*/
-.navbar__hamburgermenu input:checked ~ .menu {
-    display: block;
-    box-shadow: -20px 0 40px rgba(0,0,0,0.3);
-}
-.toggle-menu {
-    position: absolute;
-    width: 46px;
-    height: 100%;
-    z-index: 3;
-    cursor: pointer;
-    opacity: 0;
-}
 
-.navbar__hamburger, .toggle-menu {
-    display: none;
-}
 .menu{
+    display: none;
+    flex-direction: column;
     position: absolute;
-    width: 80vw;
+    width: 90vw;
     background-color: var(--primary);
     list-style: none;
-    right: 40px;
+    right: 20px;
     top: 80px;
     margin:0;
     padding: 0 ;
-    border-top: 1em solid var(--bg);
-    border-right: 1em solid transparent;
 }
+.menu.active {
+    display: flex;
+}
+.menu.active::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 20px solid var(--primary);
+    top: -20px;
+    right: 0.5em;
+    position: absolute;
+}
+
 .menu__item{
     font-size: 16px;
     color: var(--bg);
@@ -123,6 +110,19 @@ a{
     color: var(--bg)
 }
 
+/*MAIN HEADER*/
+.header-main {
+    display:flex;
+    background: linear-gradient(0deg, rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.4)), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #42332A 0%, rgba(255, 255, 255, 0) 100%) ,url("../media/pageheader-1920w.jpg");
+    background-position: center;  
+    background-blend-mode: normal, normal, hue, normal;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 269px;
+    width: 100vw;
+    justify-content: center;
+    align-items:flex-end;
+}
 
 .header__text{
     bottom: 0;
@@ -140,6 +140,9 @@ a{
 .header__text--2{
     font-size: 20px;
     font-weight: 300;
+}
+.header-others{
+    
 }
 .services__header-heading{
     font-size: 22px;
@@ -162,11 +165,11 @@ h3{
     font-size: 20px;
     margin: 0;
 }
-.main__section{
+.section{
     margin-top: 0;
     margin-bottom: 2em;
 }
-.main__section-btn{
+.section-btn{
     display: block;
     padding:  0.5em;
     width: 30%;
@@ -174,18 +177,18 @@ h3{
     color: #EB6C27;
     border: 1px dashed var(--primary);
 }
-.main__section:nth-child(2n + 1) > img{
+.section:nth-child(2n + 1) > img{
     border-bottom-left-radius: 4em;
 
 }
-.main__section:nth-child(2n) > img{
+.section:nth-child(2n) > img{
     border-bottom-right-radius: 2em;
 
 }
-.main__section-img{
+.section-img{
     height: 10em;
 }
-.body__header__trust{
+.header__trust{
     display:flex;
     background: linear-gradient(0deg, rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), linear-gradient(180deg, rgba(66, 51, 42, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url("../media/background-CTAblock-4460w.jpg");
     background-position: center;  
@@ -212,9 +215,7 @@ h3{
     color: var(--bg);
     font-weight: 700;
 }
-.body__header__containter{
-    width: 100%;
-}
+
 .reference{
     text-align: center;
     margin-top: 2em;
@@ -240,7 +241,7 @@ h3{
     display: flex;
     justify-content: center;
 }
-.body__footer {
+.footer {
     display: flex;
     margin-top: 5em;
     height: 283px;
@@ -259,7 +260,18 @@ h3{
 
 .about__list{
     padding-left:1em;
+    list-style: disc;
 }
 .about__list-item::marker{
     color: orange;
+}
+.gap{
+    gap: 1em;
+}
+.top-padding{
+    padding-top: 4em;
+    margin: 0;
+}
+.footer--top-padding{
+    padding-top: 2em;
 }
