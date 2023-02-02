@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/form.css">
     <script src="./scripts/main.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header class="header-others">
+    <header class="header-others center">
         <nav class="navbar" id="home">
             <a href="./index.html"><img class="navbar-logo" src="./media/logo.png"></a>
             <div class="hamburgermenu">
@@ -25,13 +26,53 @@
                 <li class="menu__item"><a href="./About.html">O NÁS</a></li>
                 <li class="menu__item"><a href="./kontakt.html">Kontakt</a></li>
             </ul>
-            
         </nav>
-        
-        <div class="header__text">
-            <h1 class="header__text--1">HM Building.cz s.r.o.</h1>
-            <h2 class="header__text--2">liberecká stavební společnost</h2>
-        </div>
+        <h1 class="top-padding">Kontaktujte nás</h1>
+        <p>Zavolejte anebo nám napište... kvalitní komunikace je jeden z pilířů, na kterém stavíme.</p>
     </header>
+    <div class="Kontakt--grid">
+        
+        <main class="main">
+            
+            <ul class="kontakt__list">
+                <li class="Kontakt__list-element Kontakt__list-element--phone">+420 775 550 564</li>
+                <li class="Kontakt__list-element Kontakt__list-element--mail">stavby@hm-building.cz</li>
+                <li class="Kontakt__list-element Kontakt__list-element--location">Křížanská 10, Liberec XXII-Horní Suchá</li>
+            </ul>
+        </main>
+        <div class="Contact__Map"></div>
+    </div>
+    <main class="main">
+        <h2>Nezávazná poptávka služeb</h2>
+        <p>Plácneme si pro Váš projekt? Nezávazně nás kontaktujte a domluvme vše potřebné.</p>
+        <form>
+            <label class="form__item">
+                Jméno a příjmení
+                <input type="text" class="form__item__input">
+              </label>
+              <label class="form__item">
+                E-mail
+                <input type="email" class="form__item__input">
+              </label>
+              <label class="form__item">
+                Telefon
+                <input type="text" class="form__item__input">
+              </label>
+              <label class="form__item">
+                Poptávaná služba
+                <select class="form__item__input">
+                  <option value="Novostavba">Novostavba</option>
+                  <option value="Novostavba">Průmyslová stavba</option>
+                  <option value="Novostavba">Rekonstrukce</option>
+                  <option value="Novostavba">Komunikace a zpevněné plochy</option>
+                </select>
+              </label>
+              <label class="form__item">
+                Poznámka
+                <textarea rows="10" class="form__item__input"></textarea>
+              </label>
+              <a class="header__trust-btn Contact__btn--width" href="#">Odeslat nezávaznou poptávku</a>
+        </form>
+    </main>
 </body>
 </html></html>

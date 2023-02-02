@@ -29,6 +29,11 @@ a{
     justify-content: center;
     grid-template-columns: 0.9fr;
 }
+.gallery{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.9fr;
+}
 .p{
     margin: 0.3em
 }
@@ -36,7 +41,12 @@ a{
 
 
 /*NAVBAR*/
-
+.navbar-logo{
+    padding-left: 2em;
+}
+.hamburgermenu{
+    padding-right: 2em;
+}
 .hamburgermenu-line{
     width: 46px;
     height: 8px;
@@ -187,6 +197,7 @@ h3{
 }
 .section-img{
     height: 10em;
+    
 }
 .header__trust{
     display:flex;
@@ -223,6 +234,9 @@ h3{
 .reference > p{
     margin: 0;
 }
+.reference-img{
+    height: 10em;
+}
 .btn{
     display: block;
     text-align: center;
@@ -241,6 +255,9 @@ h3{
     display: flex;
     justify-content: center;
 }
+.Contact__btn--width{
+    width: 80%;
+}
 .footer {
     display: flex;
     margin-top: 5em;
@@ -258,12 +275,14 @@ h3{
     justify-content: center;
 }
 
-.about__list{
-    padding-left:1em;
+.orange-list{
+    padding-left: 1.5em;
     list-style: disc;
 }
-.about__list-item::marker{
-    color: orange;
+.orange-list-item::marker{
+    color: var(--primary);
+    font-size: 1.5em;
+
 }
 .gap{
     gap: 1em;
@@ -274,4 +293,133 @@ h3{
 }
 .footer--top-padding{
     padding-top: 2em;
+}
+.NoMargin{
+    margin: 0;
+}
+.Kontakt__list{
+    font-weight: bold;
+    color: var(--primary);
+}
+.Kontakt__list-element{
+    
+}
+.Kontakt__list-element::marker{
+    font-size: 3em;
+}
+.Contact__Map{
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-image: url(../media/mapa.jpg);
+    height: 174px;
+    width: 100vw;
+}
+.center{
+    text-align: center;
+}
+@media only screen and (min-width: 760px){
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 28px;
+
+    }
+    .services__header{
+        text-align: center;
+    }
+    .section{
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: 1fr 1fr;
+        gap: 3em;
+    }
+
+    .section-img{
+        width: 40vw;
+        height: 100%
+    }
+    .section:nth-child(2n + 1) > img{
+        grid-column: 2;
+    
+    }
+    .reference--grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .orange-list{
+        padding-left: 4em;
+    }
+    .Kontakt__list{
+        padding-left: 4em;
+    }
+    .Kontakt--grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .Contact__Map{
+        margin-right: -50vw;
+        width: 100%;
+        height: 100%
+    }
+    /*
+    .reference-img{
+        height: 100%;
+        width: 30vw;
+    }
+    .reference-text{
+        position: absolute;
+        top: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: rgba(235, 108, 39, 0.8);
+    }
+    .reference:hover{
+        background-color: rgba(235, 108, 39, 0.9);
+    }
+    .reference{
+        background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
+    }*/
+    .navbar{
+        width: 80vw;
+        top: 1.5em;
+    }
+    .navbar-logo{
+        padding-left: 40%;
+    }
+    .header__trust{
+        padding-left: 2em;
+    }
+    .hamburgermenu{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0);
+        flex-direction: row;
+        
+        right: 0;
+        top: 0;
+    }
+    .menu__item{
+        color: var(--text);
+    }
+}
+@media only screen and (max-width: 960px) and (orientation: landscape){
+
+    }
+@media only screen and (min-width: 961px){
+
+}
+@media only screen and (min-width: 1281px){ 
+
 }
