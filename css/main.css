@@ -4,6 +4,10 @@
 }
 html {
     scroll-behavior: smooth;
+    font-family: "Open Sans";
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
 }
 :root{
     --primary: #EB6C27;
@@ -15,14 +19,10 @@ html {
 body{
     margin: 0;
 }
-body > *{
-    font-family: "Open Sans";
-    color: var(--text);
-    font-size: 14px;
-    font-weight: 400;
-}
 a{
     text-decoration: none;
+    color: var(--text);
+    display: inline-block;
 }
 .main {
     display: grid;
@@ -31,25 +31,25 @@ a{
 }
 .gallery{
     display: grid;
+    grid-auto-flow: dense;
     justify-content: center;
     grid-template-columns: 0.9fr;
+    grid-auto-rows: 15em;
 }
-.p{
-    margin: 0.3em
+.ratio1to2{
+    grid-row: span 2;
 }
-
-
-
 /*NAVBAR*/
 .navbar-logo{
     padding-left: 2em;
 }
 .hamburgermenu{
     padding-right: 2em;
+    font-size: 0.8em;
 }
 .hamburgermenu-line{
-    width: 46px;
-    height: 8px;
+    width: 40px;
+    height: 7px;
     background: linear-gradient(90deg, #EB6C27 0%, #FFBE9A 100%);
 }
 
@@ -59,9 +59,6 @@ a{
     text-align: center;
     flex-direction: column;
     gap: 5px;
-}
-.hamburgermenu-text{
-    font-size: 12px;
 }
 
 .navbar{
@@ -110,7 +107,6 @@ a{
 }
 
 .menu__item{
-    font-size: 16px;
     color: var(--bg);
     margin: 1em 1.5em;
     text-decoration: underline;
@@ -131,7 +127,7 @@ a{
     background-blend-mode: normal, normal, hue, normal;
     background-repeat: no-repeat; 
     background-size: cover;
-    height: 269px;
+    min-height: 269px;
     width: 100vw;
     justify-content: center;
     align-items:flex-end;
@@ -148,43 +144,40 @@ a{
 }
 .header__text--1{
     font-weight: 800;
-    font-size: 30px;
+    font-size: 2em;
 }
 .header__text--2{
-    font-size: 20px;
+    font-size: 0.7em;
     font-weight: 300;
 }
-.header-others{
-    
-}
 .services__header-heading{
-    font-size: 22px;
+    font-size: 1.5em;
+    font-weight: bold;
 }   
 .orange{
     color: var(--primary);
 }
 .img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .services__header{
     margin-bottom: 5em;
+    text-align: center;
 }
 h2{
-    font-size: 22px;
+    font-size: 1.5em;
 }
-h3{
-    font-size: 20px;
-    margin: 0;
+h1{
+    font-size: 2.5em;
 }
 .section{
     margin-top: 0;
     margin-bottom: 2em;
 }
 .section-btn{
-    display: block;
+    display: inline-block;
     padding:  0.5em;
-    width: 30%;
     text-align: center;
     color: #EB6C27;
     border: 1px dashed var(--primary);
@@ -197,58 +190,30 @@ h3{
     border-bottom-right-radius: 2em;
 
 }
-.section-img{
-    height: 15em;
-    
-}
 .header__trust{
-    display:flex;
     background: linear-gradient(0deg, rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), linear-gradient(180deg, rgba(66, 51, 42, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url("../media/background-CTAblock-4460w.jpg");
     background-position: center;  
     background-blend-mode: normal, normal, hue, normal;
     background-repeat: no-repeat; 
     background-size: cover;
-    height: 189px;
     width: 100vw;
-    flex-direction: column;
+    color: white;
+    padding: 1em 0;
 }
-.header__trust-text{
-    color: var(--bg);
-    font-size: 17px;
-    margin: 1em 0 0 1em
+.header__trust > *{
+    margin-left: 2em;
 }
-.header__trust-btn{
-    display: block;
-    text-align: center;
-    margin-top: 1.5em;
-    margin-left: 1em;
-    padding: 0.9em;
-    width: 40%;
-    background-color: var(--primary);
-    color: var(--bg);
-    font-weight: 700;
-}
-
 .reference{
     text-align: center;
     margin-top: 2em;
 }
-.reference-text{
-    color: var(--text);
-}
-.reference > p{
-    margin: 0;
-    color: white;
-}
-.reference-img{
-    height: 10em;
+.reference-text > p:first-of-type{
+    font-weight: bold;
+    font-size: 1.5em;
 }
 .btn{
-    display: block;
     text-align: center;
-    margin-top: 1.5em;
-    padding: 0.9em;
-    width: 47%;
+    padding: 1em 4em;
     background-color: var(--primary);
     color: var(--bg);
     font-weight: 700;
@@ -261,13 +226,11 @@ h3{
     display: flex;
     justify-content: center;
 }
-.Contact__btn--width{
-    width: 80%;
-}
 .footer {
     display: flex;
     margin-top: 5em;
-    height: 283px;
+    padding-bottom: 5em;
+    padding-top: 2em;;
     background-color: var(--primary);
     justify-content: center;
 }
@@ -277,7 +240,6 @@ h3{
 .footer__text{
     width: 80%;
     text-align: center;
-    font-size: 15px;
     justify-content: center;
 }
 
@@ -306,36 +268,25 @@ h3{
 .Kontakt__list{
     font-weight: bold;
     color: var(--primary);
-}
-.Kontakt__list-element{
-    
-}
-.Kontakt__list-element::marker{
-    font-size: 3em;
-}
-.Contact__Map{
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-image: url(../media/mapa.jpg);
-    height: 174px;
-    width: 100vw;
+    list-style-type: none;
 }
 .center{
     text-align: center;
+}
+.gallery-item{
+    height: 100%;
+}
+.icon{
+    width: 3em;
+    height:3em;
 }
 @media only screen and (min-width: 760px){
     html > *{
         font-size: 16px;
     }
-    h3{
-        font-size: 22px;
-    }
-    h1{
-        font-size: 32px;
-    }
-    h2{
-        font-size: 28px;
 
+    .main--flex{
+        display: flex;
     }
     .services__header{
         text-align: center;
@@ -355,13 +306,15 @@ h3{
         grid-column: 2;
     
     }
+    .gallery-img{
+        height:100%;
+    }
     .reference--grid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2em;
     }
     .gallery{
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
     .orange-list{
@@ -370,38 +323,19 @@ h3{
     .Kontakt__list{
         padding-left: 4em;
     }
+    .Kontakt__list-element{
+        color: var(--primary);
+    }
     .Kontakt--grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .Contact__Map{
-        margin-right: -50vw;
-        width: 100%;
-        height: 100%
-    }
 
-    .reference-img{
-        height: 80%;
-        width: 100%;
-    }/*
-    .reference-text{
-
-    }
-    .reference:hover{
-        background-color: rgba(235, 108, 39, 0.9);
-    }
-    .reference{
-        background-color: rgba(255, 255, 255, 0.5);
-        position: relative;
-    }*/
     .navbar{
         display: flex;
         width: 80vw;
         top: 1.5em;
         position: absolute;
-    }
-    .navbar-logo{
-        
     }
     .hamburgermenu{
         display: none;
@@ -441,13 +375,15 @@ h3{
         grid-column: span 2;
     }
 }
-@media only screen and (max-width: 960px) and (orientation: landscape){
-
-}
 @media only screen and (min-width: 961px){
-
+    html{
+        font-size: 18px;
+    }
 }
 @media only screen and (min-width: 1281px){ 
+    html{
+        font-size: 20px;
+    }
     .reference{
         position: relative;
     }
